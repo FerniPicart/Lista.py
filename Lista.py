@@ -418,6 +418,7 @@ def spotify(lista):
         insertar(lista,dato,'reprod')
     aux = lista.inicio
     m_dur = 0
+    # A
     while aux != None:
         if aux.info.duracion > m_dur:
             m_dur = aux.info.duracion
@@ -425,15 +426,38 @@ def spotify(lista):
         aux = aux.sig
     print('la cancion de mayor duracion es ' + pos.info.nombre + ', de ' + pos.info.banda + ' con ' + str(pos.info.duracion) + ' minutos de duracion')
     print('')
-
+    # B
     print('Top 5 de canciones mas escuchadas')
     aux = lista.inicio
     i = 0
     while aux != None:
+        i+=1
         if (i == tamanio(lista)-5) :
             for i in range(5):
                 print(aux.info.nombre + ', de ' + aux.info.banda + '; de duracion ' + str(aux.info.duracion) + ' y ' + str(aux.info.reprod) + ' MM. cantidad de reproducciones')
                 aux = aux.sig
+        aux = aux.sig
+    print('')
+    # C
+    print('Canciones de la banda "Arctic Monkeys":')
+    aux = lista.inicio
+    while not aux == None:
+        if aux.info.banda == 'Arctic Monkeys':
+            print(aux.info.nombre + ';')
+        aux = aux.sig
+    print()
+    # D
+    print('Bandas o artistas que solo son de una palabra:')
+    aux = lista.inicio
+    while not aux == None:
+        esp = False
+        for i in range (len(aux.info.banda)):
+            char = aux.info.banda[i]
+            if char == ' ':
+                esp = True
+        if esp == False:
+            print('- ' +aux.info.banda)
+        aux = aux.sig
 
 print(spotify(lista))
 '''
