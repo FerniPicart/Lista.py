@@ -396,7 +396,6 @@ print(parciales_alumnos(lista))
 #c. obtener todas las canciones de la banda Arctic Monkeys;
 #d. mostrar los nombres de las bandas o artistas que solo son de una palabra.
 '''
-TENGO QUE ARREGLAR LA PARTE DEL TOP 5
 
 canciones = ['In the end','505','Smoke on the wather','Marinero','Hoja en blanco','Habia una vez','Give me power','Do I wanna know']
 bandas = ['Linkin Park','Arctic Monkeys','Deep Purple','Maluma','Dread Mar I','Indio Solari','Molotov','Arctic Monkeys']
